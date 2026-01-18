@@ -1,0 +1,13 @@
+import cv2
+image=cv2.imread("phase1/new.jpeg")
+guassian_blur=cv2.GaussianBlur(image,(5,5),6)
+canny=cv2.Canny(image,100,200)
+medianblur=cv2.medianBlur(image,5)
+bilaterlblur=cv2.bilateralFilter(image,5,5,5)
+cv2.imshow("Image",image)
+cv2.imshow("Gaussian Blur",guassian_blur)
+cv2.imshow("Canny",canny)
+cv2.imshow("Median Blur",medianblur)
+cv2.imshow("Bilateral Blur",bilaterlblur)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
